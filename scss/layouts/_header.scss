@@ -1,0 +1,73 @@
+header {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  .navbar {
+    max-width: 1260px;
+    margin: auto;
+    height: 80px;
+  }
+  .navbar-brand img {
+    width: 90%;
+  }
+  .nav-link {
+    @include styleText($fs-1, $fw-2, $color-black-1 !important);
+    margin: 0px 20px;
+    transition: 0.5s;
+    &::after {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      background-color: #b61984;
+      margin: auto;
+      margin-top: 20px;
+      transform: scaleX(0) scaleY(0);
+      transition: 0.5s;
+    }
+    margin-top: 30px;
+  }
+  .nav-item a:hover {
+    color: #b61984 !important;
+    &::after {
+      transform: scaleX(1) scaleY(1);
+    }
+  }
+  .active {
+    .nav-link {
+      color: #b61984 !important;
+      &::after {
+        transform: scaleX(0.6) scaleY(0.6);
+      }
+    }
+  }
+  .menuCell {
+    padding-left: 20px;
+  }
+  .btn {
+    @include styleButton($color-purple-1, 12px, 20px, 1px, 50px, 0.5s);
+    @include styleText($fs-1, $fw-2, white);
+    transition: 0.5s;
+  }
+  .btn:hover {
+    @include styleButtonHover(
+      white,
+      1px,
+      solid,
+      $color-purple-1,
+      $color-purple-1
+    );
+  }
+  .btn i {
+    margin-right: 5px;
+  }
+  a {
+    @include styleText($fs-1, $fw-2, $color-black-1);
+    margin: 0 6px;
+  }
+  a:hover {
+    color: #b61984;
+  }
+}

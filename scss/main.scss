@@ -1,0 +1,13 @@
+//Helpers
+@import "./helpers/variable";
+@import "./helpers/mixin";
+
+//Base
+@import "./base/reset";
+
+//layouts
+@import "./layouts/header";
+@import "./layouts/carousel";
+@import "./layouts/content";
+@import "./layouts/information";
+@import "./layouts/footer";
